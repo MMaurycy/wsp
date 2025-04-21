@@ -1,7 +1,8 @@
 # WSP Solver: Optymalizator Rozmieszczenia Gości Weselnych (i nie tylko!)
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ## Wprowadzenie
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Wprowadzenie
 
 WSP Solver to zaawansowana aplikacja webowa zaprojektowana do rozwiązywania **Problemu Rozmieszczania Gości Weselnych** (Wedding Seating Problem - WSP), złożonego problemu optymalizacji kombinatorycznej. Aplikacja nie tylko implementuje różne algorytmy heurystyczne i metaheurystyczne do znalezienia optymalnego lub bliskiego optymalnemu rozmieszczenia gości przy stołach, ale również oferuje rozbudowane API RESTful, interaktywny dashboard do zarządzania i wizualizacji oraz trwałą persystencję danych w bazie PostgreSQL. Projekt jest w pełni skonteneryzowany przy użyciu Docker i Docker Compose.
 
@@ -153,21 +154,9 @@ Kod w `src/solver.py` jest przygotowany do logowania przebiegów do MLflow. Aby 
     ```
 4.  Otwórz `http://localhost:5001` w przeglądarce.
 
-## Możliwości Dalszego Rozwoju
-
-* **Interaktywny Graf Relacji:** Zastąpienie statycznego grafu Matplotlib dynamiczną wizualizacją (np. Pyvis).
-* **Historia Wyników w UI:** Wyświetlanie tabeli z historycznymi wynikami dla danego wydarzenia (z `GET /events/{id}/results`) w dashboardzie.
-* **Edycja Wydarzeń:** Dodanie możliwości edycji nazwy/opisu wydarzenia w API i UI.
-* **Testy Automatyczne:** Implementacja testów jednostkowych i integracyjnych (pytest).
-* **CI/CD:** Konfiguracja pipeline'u np. w GitHub Actions.
-* **Strojenie Hiperparametrów:** Użycie Optuny do optymalizacji parametrów Tabu Search.
-* **Nowe Algorytmy:** Implementacja np. Symulowanego Wyżarzania, Algorytmów Ewolucyjnych.
-* **Pełne Zarządzanie Danymi:** Rozbudowa API/UI o możliwość ręcznego dodawania/edycji/usuwania Grup i Relacji dla wydarzeń.
-* **Wdrożenie w Chmurze:** Uruchomienie aplikacji na platformie takiej jak Render, Heroku, Google Cloud Run czy AWS.
-
 ## Licencja
 
-Ten projekt jest udostępniany na licencji MIT - zobacz plik [LICENSE](LICENSE) po szczegóły (jeśli go dodasz).
+Ten projekt jest udostępniany na licencji MIT - zobacz plik [LICENSE](LICENSE) po szczegóły.
 
 ## Autor
 
