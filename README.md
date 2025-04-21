@@ -159,19 +159,6 @@ Umożliwia:
 * Lub użyj przycisku "Uruchom Eksperymenty Skalowalności w tle" w Dashboardzie.
 * Wyniki zostaną zapisane w `results/scalability_results.csv` i będą widoczne w sekcji analizy w Dashboardzie po odświeżeniu.
 
-## Możliwości Dalszego Rozwoju
-
-* **Integracja z MLflow:** Aktywacja i pełne wykorzystanie zintegrowanego kodu do śledzenia eksperymentów (parametry, metryki, artefakty) i wizualizacji za pomocą `mlflow ui`.
-* **Interaktywny Graf Relacji:** Zastąpienie statycznego grafu Matplotlib dynamiczną wizualizacją (np. Pyvis).
-* **Historia Wyników w UI:** Wyświetlanie tabeli z historycznymi wynikami dla wydarzenia w dashboardzie.
-* **Edycja Wydarzeń:** Dodanie możliwości edycji nazwy/opisu wydarzenia.
-* **Testy Automatyczne:** Implementacja testów jednostkowych i integracyjnych (pytest).
-* **CI/CD:** Konfiguracja pipeline'u (np. GitHub Actions).
-* **Strojenie Hiperparametrów:** Użycie Optuny do optymalizacji parametrów Tabu Search.
-* **Nowe Algorytmy:** Implementacja np. Symulowanego Wyżarzania, Algorytmów Ewolucyjnych.
-* **Pełne Zarządzanie Danymi:** Rozbudowa API/UI o ręczne zarządzanie Grupami i Relacjami.
-* **Wdrożenie w Chmurze:** Uruchomienie aplikacji na publicznie dostępnej platformie.
-
 ## Licencja
 
 Ten projekt jest udostępniany na licencji MIT - zobacz plik `LICENSE` po szczegóły.
