@@ -1,0 +1,43 @@
+services:
+  wsp_app:                       # Aplikacja (FastAPI + Streamlit + MLflow)
+    build: .
+    container_name: wsp_container
+    working_dir: /app
+    volumes:
+      - .:/app                   # cały projekt (dla dev)
+      - ./mlruns:/app/mlruns    # logi MLflow
+    ports:
+      - "8000:8000"             # FastAPI
+      - "8501:8501"             # Streamlit
+      - "5001:5001"             # MLflow UI
+    tty: true
+    stdin_open: true
+    environment:
+      - DATABASE_URL=postgresql://wsp_user:wsp_password@db:5432/wsp_db
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app         # dla poprawnych importów
+      # - MLFLOW_TRACKING_URI=file:///app/mlruns  # opcjonalnie
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:                            # Baza danych PostgreSQL
+    image: postgres:15
+    container_name: wsp_postgres_db
+    environment:
+      POSTGRES_USER: wsp_user
+      POSTGRES_PASSWORD: wsp_password
+      POSTGRES_DB: wsp_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"             # opcjonalnie do debugowania
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:                 # trwałość danych
+  # mlruns: {}                   # opcjonalny wolumin MLflow

@@ -1,0 +1,27 @@
+# Podstawowe
+pandas==2.2.2
+networkx==3.3
+numpy==1.26.4
+matplotlib==3.8.4
+
+# API
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+
+# Dashboard
+streamlit>=1.20.0
+plotly>=5.0.0
+
+# Statystyka
+scipy>=1.8.0
+
+# Baza danych
+sqlalchemy>=1.4
+psycopg2-binary
+
+# Inne
+requests        # dashboard ↔ API
+mlflow
+
+# # Eksport wykresów Plotly jako PNG (opcjonalnie)
+# kaleido>=0.1.0
