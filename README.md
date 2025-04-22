@@ -156,7 +156,7 @@ Umożliwia:
     ```bash
     docker compose exec wsp_app python src/run_experiments.py
     ```
-* Lub użyj przycisku "Uruchom Eksperymenty Skalowalności w tle" w Dashboardzie.
+* Lub użyj przycisku "Uruchom Eksperymenty Skalowalności w tle" w Dashboardzie. ( jeszcze nie funkcjonalne )
 * Wyniki zostaną zapisane w `results/scalability_results.csv` i będą widoczne w sekcji analizy w Dashboardzie po odświeżeniu.
 
 ## Licencja
